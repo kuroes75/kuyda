@@ -1,0 +1,9 @@
+for (int i = -45; i <= 225; i += 45) {
+    QLineF line(100 + 80 * cos(i * M_PI / 180),
+                100 - 80 * sin(i * M_PI / 180),
+                100 + 100 * cos(i * M_PI / 180),
+                100 - 100 * sin(i * M_PI / 180));
+    QGraphicsLineItem *tick = new QGraphicsLineItem(line);
+    tick->setPen(QPen(Qt::black));
+    scene->addItem(tick);
+}
