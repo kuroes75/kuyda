@@ -1,0 +1,8 @@
+QPointF points[3] = { QPointF(100, 100),
+                      QPointF(95, 90),
+                      QPointF(105, 90) };
+QGraphicsPolygonItem *pointer = new QGraphicsPolygonItem(QPolygonF(points, 3));
+pointer->setPen(QPen(Qt::black));
+pointer->setBrush(QBrush(Qt::red));
+pointer->setTransformOriginPoint(100, 100);
+scene->addItem(pointer);
